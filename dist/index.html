@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --text-color: #e2e8f0;
-            --accent-color: #38bdf8;
-            --secondary-bg: #1e293b;
-            --border-color: #334155;
-            --code-bg: #000000;
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #ffffff;
+            --secondary-bg: #111111;
+            --border-color: #333333;
+            --code-bg: #0a0a0a;
         }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
             color: var(--text-color);
             background-color: var(--bg-color);
@@ -25,86 +25,62 @@
             justify-content: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 720px;
             width: 100%;
-            padding: 40px 20px;
+            padding: 48px 24px;
         }
         h1, h2, h3, h4, h5, h6 {
-            color: #f8fafc;
+            color: var(--text-color);
             margin-top: 2em;
-            margin-bottom: 1em;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            margin-bottom: 0.75em;
+            font-weight: 600;
         }
         h1 { 
-            font-size: 3rem; 
+            font-size: 2.5rem; 
             text-align: center; 
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             margin-bottom: 0.5em;
+            letter-spacing: -0.03em;
         }
-        h2 { font-size: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.3em; margin-top: 2.5em; }
-        h3 { font-size: 1.5rem; color: #bae6fd; }
-        a { color: var(--accent-color); text-decoration: none; transition: all 0.2s; border-bottom: 1px solid transparent; }
-        a:hover { color: #7dd3fc; border-bottom: 1px solid #7dd3fc; }
+        h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5em; margin-top: 2.5em; }
+        h3 { font-size: 1.25rem; color: #cccccc; }
+        a { color: var(--accent-color); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #666; transition: text-decoration-color 0.15s; }
+        a:hover { text-decoration-color: #fff; }
         img { 
             max-width: 100%; 
             height: auto; 
-            border-radius: 12px; 
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5); 
-            margin: 30px 0; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 4px; 
+            margin: 24px 0; 
+            border: 1px solid var(--border-color);
         }
-        img:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-        pre { background-color: var(--code-bg); padding: 20px; border-radius: 12px; overflow-x: auto; border: 1px solid var(--border-color); box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
-        code { font-family: 'Fira Code', monospace; font-size: 0.9em; }
-        p code, li code { background-color: var(--secondary-bg); padding: 0.2em 0.4em; border-radius: 6px; color: #67e8f9; }
+        pre { background-color: var(--code-bg); padding: 16px; border-radius: 4px; overflow-x: auto; border: 1px solid var(--border-color); font-size: 0.875em; }
+        code { font-family: ui-monospace, monospace; font-size: 0.9em; }
+        p code, li code { background-color: var(--secondary-bg); padding: 0.2em 0.4em; border-radius: 3px; color: #fff; }
         blockquote { 
-            border-left: 4px solid var(--accent-color); 
-            padding-left: 20px; 
-            color: #94a3b8; 
-            margin: 30px 0; 
-            font-style: italic; 
-            background: rgba(30, 41, 59, 0.5);
-            padding: 15px 20px;
-            border-radius: 0 8px 8px 0;
+            border-left: 2px solid #666; 
+            padding-left: 16px; 
+            color: #999; 
+            margin: 24px 0; 
+            font-style: normal;
         }
-        hr { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(51, 65, 85, 0), rgba(51, 65, 85, 1), rgba(51, 65, 85, 0)); margin: 50px 0; }
-        ul, ol { padding-left: 24px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        li::marker { color: var(--accent-color); }
-        table { width: 100%; border-collapse: collapse; margin: 30px 0; background: var(--secondary-bg); border-radius: 8px; overflow: hidden; }
-        th, td { border: 1px solid var(--border-color); padding: 15px; text-align: left; }
-        th { background-color: rgba(0,0,0,0.2); font-weight: 600; }
+        hr { border: 0; height: 1px; background: var(--border-color); margin: 40px 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        li::marker { color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; border: 1px solid var(--border-color); }
+        th, td { border: 1px solid var(--border-color); padding: 12px; text-align: left; }
+        th { background-color: var(--secondary-bg); font-weight: 600; }
         
-        /* Layout utilities */
         .flex { display: flex; }
         .flex-row { flex-direction: row; }
         .gap-4 { gap: 1rem; }
         .flex-1 { flex: 1; }
         
-        /* Animations */
         .markdown-body {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
+            animation: fadeIn 0.2s ease-out forwards;
         }
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Glassmorphism elements */
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -421,71 +397,6 @@ npx skills add https://github.com/michalparkola/tapestry-skills-for-claude-code/
 </ul>
 
     </div>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-            if (link.hostname !== window.location.hostname && link.hostname !== '') {
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                
-                // Add external link icon indicator
-                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-                svg.setAttribute('width', '12');
-                svg.setAttribute('height', '12');
-                svg.setAttribute('viewBox', '0 0 24 24');
-                svg.setAttribute('fill', 'none');
-                svg.setAttribute('stroke', 'currentColor');
-                svg.setAttribute('stroke-width', '2');
-                svg.setAttribute('stroke-linecap', 'round');
-                svg.setAttribute('stroke-linejoin', 'round');
-                svg.style.marginLeft = '4px';
-                svg.style.display = 'inline-block';
-                svg.style.verticalAlign = 'middle';
-                
-                const path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                path1.setAttribute('d', 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6');
-                
-                const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-                polyline.setAttribute('points', '15 3 21 3 21 9');
-                
-                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                line.setAttribute('x1', '10');
-                line.setAttribute('y1', '14');
-                line.setAttribute('x2', '21');
-                line.setAttribute('y2', '3');
-                
-                svg.appendChild(path1);
-                svg.appendChild(polyline);
-                svg.appendChild(line);
-                
-                link.appendChild(svg);
-            }
-        });
-        
-        // Add subtle reveal animation to elements as they scroll into view
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('h2, h3, p, ul, ol, img, pre, blockquote').forEach(el => {
-            if (!el.closest('.markdown-body > *:first-child')) {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(15px)';
-                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-                observer.observe(el);
-            }
-        });
     </script>
 </body>
 </html>
